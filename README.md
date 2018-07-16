@@ -49,7 +49,7 @@ For one to use the API they need to make sure they have the correct http headers
 7. Ensure you have the correct headers especially for authentication
 8. To run test run `python manage.py test`
 
-###Farmer Registration Request
+### Farmer Registration Request
 `
 {
     "first_name" : "Peter",
@@ -63,7 +63,7 @@ For one to use the API they need to make sure they have the correct http headers
 }
 `
 
-###Farmer Registration Response
+### Farmer Registration Response
 202 [Accepted]  Request accepted processing underway
 
 `
@@ -76,7 +76,7 @@ For one to use the API they need to make sure they have the correct http headers
 
 403 [Forbidden] API authentication failed
 
-###Seed Bag Registration Request
+### Seed Bag Registration Request
 `
 {
     "phone_number" : "254725817350",
@@ -84,7 +84,7 @@ For one to use the API they need to make sure they have the correct http headers
 }
 `
 
-###Seed Bag Registration Response
+### Seed Bag Registration Response
 202 [Accepted]  Request accepted processing underway
 
 `
@@ -106,7 +106,7 @@ Or
 403 [Forbidden] API authentication failed
 
 
-###Log events to look out for
+### Log events to look out for
 
 `register_farmer_response` - Contains response after a farmer registration attempt
 
