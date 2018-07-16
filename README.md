@@ -107,6 +107,7 @@ Or
 
 
 ###Log events to look out for
+
 `register_farmer_response` - Contains response after a farmer registration attempt
 
 `register_farmer_request` - Contains request payload for a farmer registration attempt
