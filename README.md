@@ -37,7 +37,7 @@ Below are some of the assumptions that were used in the implementation of the AP
 
 For one to use the API they need to make sure they have the correct http headers for authentication
 
-{APIKEY: 'api-key-123'}
+`{APIKEY: 'api-key-123'}`
 
 #### Usage
 1. First clone the repository.
@@ -48,7 +48,9 @@ For one to use the API they need to make sure they have the correct http headers
 6. Send POST requests using a client e.g. POSTMAN
 7. Ensure you have the correct headers especially for authentication
 8. To run test run `python manage.py test`
-####Farmer Registration Request
+
+###Farmer Registration Request
+`
 {
     "first_name" : "Peter",
     "last_name" : "Muchina",
@@ -59,35 +61,45 @@ For one to use the API they need to make sure they have the correct http headers
     "village" : "Tipis",
     "crop" : "Potatoes"
 }
+`
 
-####Farmer Registration Response
+###Farmer Registration Response
 202 [Accepted]  Request accepted processing underway
+
+`
 {
     "Details": "Ok"
 }
+`
 
 400 [Bad Request] Malformed request
 
 403 [Forbidden] API authentication failed
 
-####Seed Bag Registration Request
+###Seed Bag Registration Request
+`
 {
     "phone_number" : "254725817350",
     "bag_unique_number" : "12345ygft"
 }
+`
 
-####Seed Bag Registration Response
+###Seed Bag Registration Response
 202 [Accepted]  Request accepted processing underway
 
+`
 {
     "Details": "Ok"
 }
+`
 
 Or
 
+`
 {
     "Details": "Farmer doesn't exists"
 }
+`
 
 400 [Bad Request] Malformed request
 
@@ -95,7 +107,7 @@ Or
 
 
 ###Log events to look out for
-register_farmer_response - Contains response after a farmer registration attempt
-register_farmer_request - Contains request payload for a farmer registration attempt
-register_seed_bag_response - Contains response after a seed bag registration attempt
-register_seed_bag_request - Contains request payload for a seed bag registration attempt
+`register_farmer_response` - Contains response after a farmer registration attempt
+`register_farmer_request` - Contains request payload for a farmer registration attempt
+`register_seed_bag_response` - Contains response after a seed bag registration attempt
+`register_seed_bag_request` - Contains request payload for a seed bag registration attempt
