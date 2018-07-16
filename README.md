@@ -108,6 +108,9 @@ Or
 
 ###Log events to look out for
 `register_farmer_response` - Contains response after a farmer registration attempt
+
 `register_farmer_request` - Contains request payload for a farmer registration attempt
+
 `register_seed_bag_response` - Contains response after a seed bag registration attempt
+
 `register_seed_bag_request` - Contains request payload for a seed bag registration attempt
