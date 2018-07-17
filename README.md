@@ -41,7 +41,7 @@ For one to use the API they need to make sure they have the correct http headers
 
 #### Usage
 1. First clone the repository.
-2. Ensure you have virtualenv installed
+2. Ensure you have virtualenv installed (Python version in virtual env is 2.7.10)
 3. Go to the project root
 4. Activate the virtual env i.e. `source venv/bin/activate`
 5. Run `python manage.py runserver` to start server
@@ -50,56 +50,49 @@ For one to use the API they need to make sure they have the correct http headers
 8. To run test run `python manage.py test`
 
 ### Farmer Registration Request
-`
-{
+
+`{
     "first_name" : "Peter",
     "last_name" : "Muchina",
     "other_name" : "Ndegwa",
     "phone_number" : "254725817350",
+    "language": "Swahili",
     "country" : "Kenya",
     "district" : "Nairobi",
     "village" : "Tipis",
     "crop" : "Potatoes"
-}
-`
+}`
 
 ### Farmer Registration Response
 202 [Accepted]  Request accepted processing underway
 
-`
-{
+`{
     "Details": "Ok"
-}
-`
+}`
 
 400 [Bad Request] Malformed request
 
 403 [Forbidden] API authentication failed
 
 ### Seed Bag Registration Request
-`
-{
+
+`{
     "phone_number" : "254725817350",
     "bag_unique_number" : "12345ygft"
-}
-`
+}`
 
 ### Seed Bag Registration Response
 202 [Accepted]  Request accepted processing underway
 
-`
-{
+`{
     "Details": "Ok"
-}
-`
+}`
 
 Or
 
-`
-{
+`{
     "Details": "Farmer doesn't exists"
-}
-`
+}`
 
 400 [Bad Request] Malformed request
 

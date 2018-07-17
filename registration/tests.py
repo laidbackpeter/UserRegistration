@@ -16,6 +16,7 @@ register_farmer_valid_payload = {
             "other_name": "Ndegwa",
             "phone_number": "254725817350",
             "country": "Kenya",
+            "language": "Swahili",
             "district": "Nairobi",
             "village": "Tipis",
             "crop": "Potatoes"
@@ -25,6 +26,7 @@ register_farmer_invalid_payload = {
             "last_name": "Muchina",
             "other_name": "Ndegwa",
             "country": "Kenya",
+            "language": "Swahili",
             "district": "Nairobi",
             "village": "Tipis",
             "crop": "Potatoes"
@@ -210,7 +212,7 @@ class TestSeedBagRegistrationView(LiveServerTestCase):
 
         self.assertEqual(resp.status_code, http_status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    def test_valid_request_without_invalid_farmer(self):
+    def test_valid_request_without_valid_farmer(self):
         resp = self.client.post(
             reverse('registration_urls:register-seed-bag'),
             data=json.dumps(self.register_seed_bag_valid_payload),

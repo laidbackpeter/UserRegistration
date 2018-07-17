@@ -11,6 +11,7 @@ class Farmers(models.Model):
     other_name = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=255, unique=True)
     country = models.CharField(max_length=255)
+    language = models.CharField(max_length=255, default='English')
     district = models.CharField(max_length=255)
     village = models.CharField(max_length=255)
     crop = models.CharField(max_length=255)

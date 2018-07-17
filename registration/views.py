@@ -29,6 +29,7 @@ class RegisterFarmer(APIView):
             "other_name" : "Ndegwa",
             "phone_number" : "254725817350",
             "country" : "Kenya",
+            "langauge" : "Swahili",
             "district" : "Nairobi",
             "village" : "Tipis",
             "crop" : "Potatoes"
@@ -57,6 +58,7 @@ class RegisterFarmer(APIView):
                     other_name=request_payload.get('other_name', None),
                     phone_number=request_payload['phone_number'],
                     country=request_payload['country'],
+                    language=request_payload['language'],
                     district=request_payload['district'],
                     village=request_payload['village'],
                     crop=request_payload['crop'],

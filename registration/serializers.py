@@ -7,6 +7,7 @@ class RegisterFarmerRequestSerializer(serializers.Serializer):
     other_name = serializers.CharField(max_length=50, label="Other name", allow_blank=True)
     phone_number = serializers.CharField(max_length=20, label="Phone Number", required=True, )
     country = serializers.CharField(max_length=50, label="Country", required=True)
+    language = serializers.CharField(max_length=50, label="Language", required=True)
     district = serializers.CharField(max_length=50, label="District", required=True)
     village = serializers.CharField(max_length=50, label="Village", required=True)
     crop = serializers.CharField(max_length=50, label="Crop", required=True)
