@@ -1,0 +1,22 @@
+#OS junk files
+*.DS_Store
+
+# Compiled Python modules
+*.pyo
+*.pyc
+
+# DB stuff
+*.db
+*.s3db
+*.sqlite3
+/data
+
+# Any log files
+*.log
+
+# Env files
+env
+/venv
+
+# IDE files
+.idea

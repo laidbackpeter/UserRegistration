@@ -108,3 +108,21 @@ Or
 `register_seed_bag_response` - Contains response after a seed bag registration attempt
 
 `register_seed_bag_request` - Contains request payload for a seed bag registration attempt
+
+
+### Further Instructions
+The app is using postgres for the persistence layer
+
+Create a file named `env` that will hold your required DB env variables i.e.
+
+POSTGRES_DB=
+
+POSTGRES_USER=
+
+POSTGRES_PASSWORD=
+
+POSTGRES_PORT=
+
+POSTGRES_SERVICE=
+
+If you prefer using different variable names ensure you change the names on settings.py
