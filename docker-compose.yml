@@ -1,0 +1,36 @@
+version: '3.6'
+services:
+    web:
+        build: .
+        container_name: web_container
+        restart: 'always'
+        env_file:
+            - env
+        command: ["./web_app_provisioning.sh"]
+        volumes:
+            - .:/usr/src/app
+        ports:
+            - 8000:8000
+        depends_on:
+            - db
+        links:
+            - db:db
+    db:
+      image: postgres:10.1-alpine
+      env_file:
+            - env
+      container_name: postgres_db_container
+      restart: 'always'
+    nginx:
+      image: nginx:latest
+      container_name: nginx_container
+      restart: 'always'
+      links:
+          - web:web
+      ports:
+          - 80:80
+      volumes:
+          - .:/usr/src/app
+          - ./configs/nginx:/etc/nginx/nginx.conf
+      depends_on:
+          - web

@@ -1,0 +1,5 @@
+POSTGRES_DB=registrations
+POSTGRES_USER=registration_user
+POSTGRES_PASSWORD=registration_user
+POSTGRES_PORT=5432
+POSTGRES_SERVICE=db
