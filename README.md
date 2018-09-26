@@ -111,6 +111,7 @@ Or
 
 
 ### Further Instructions
+Requirements: docker and docker-compose
 The app is using postgres for the persistence layer
 
 Create a file named `env` that will hold your required DB env variables i.e.
@@ -121,8 +122,13 @@ POSTGRES_USER=
 
 POSTGRES_PASSWORD=
 
-POSTGRES_PORT=
+POSTGRES_PORT=5432
 
 POSTGRES_SERVICE=
 
 If you prefer using different variable names ensure you change the names on settings.py
+
+
+To start the app run: docker-compose up
+
+For more commands look at the MakeFile
