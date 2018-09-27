@@ -124,7 +124,7 @@ POSTGRES_PASSWORD=
 
 POSTGRES_PORT=5432
 
-POSTGRES_SERVICE=
+POSTGRES_SERVICE=db
 
 If you prefer using different variable names ensure you change the names on settings.py
 
